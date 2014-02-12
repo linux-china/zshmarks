@@ -53,7 +53,7 @@ function s {
 }
 
 # jump to bookmark
-function g {
+function go {
     check_help $1
     source $SDIRS
     target="$(eval $(echo echo $(echo \$DIR_$1)))"
@@ -74,7 +74,7 @@ function p {
 }
 
 # delete bookmark
-function d {
+function delete {
     check_help $1
     _bookmark_name_valid "$@"
     if [ -z "$exit_message" ]; then
@@ -97,7 +97,7 @@ function check_help {
 }
 
 # list bookmarks with dirnam
-function l {
+function list {
     check_help $1
     source $SDIRS
 
@@ -158,12 +158,12 @@ function _purge_line {
 
 # bind completion command for g,p,d to _comp
 if [ $ZSH_VERSION ]; then
-    compctl -K _compzsh g
+    compctl -K _compzsh go
     compctl -K _compzsh p
-    compctl -K _compzsh d
+    compctl -K _compzsh delete
 else
     shopt -s progcomp
-    complete -F _comp g
+    complete -F _comp go
     complete -F _comp p
-    complete -F _comp d
+    complete -F _comp delete
 fi
