@@ -24,3 +24,21 @@ Because some conflicts with oh-my-zsh and git plugin, changes as following:
 * g -> go
 * d -> delete
 * l -> list
+
+### Shell Commands
+
+    s      <bookmark_name> - Saves the current directory as "bookmark_name"
+    go     <bookmark_name> - Goes (cd) to the directory associated with "bookmark_name"
+    p      <bookmark_name> - Prints the directory associated with "bookmark_name"
+    delete <bookmark_name> - Deletes the bookmark
+    list                 - Lists all available bookmarks
+
+### Example Usage
+
+    $ cd /var/www/
+    $ s webfolder
+    $ cd /usr/local/lib/
+    $ s locallib
+    $ list
+    $ go web<tab>
+    $ go webfolder
