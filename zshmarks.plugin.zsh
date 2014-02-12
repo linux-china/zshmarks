@@ -87,11 +87,11 @@ function delete {
 function check_help {
     if [ "$1" = "-h" ] || [ "$1" = "-help" ] || [ "$1" = "--help" ] ; then
         echo ''
-        echo 's <bookmark_name> - Saves the current directory as "bookmark_name"'
-        echo 'g <bookmark_name> - Goes (cd) to the directory associated with "bookmark_name"'
-        echo 'p <bookmark_name> - Prints the directory associated with "bookmark_name"'
-        echo 'd <bookmark_name> - Deletes the bookmark'
-        echo 'l                 - Lists all available bookmarks'
+        echo 's      <bookmark_name> - Saves the current directory as "bookmark_name"'
+        echo 'go     <bookmark_name> - Goes (cd) to the directory associated with "bookmark_name"'
+        echo 'p      <bookmark_name> - Prints the directory associated with "bookmark_name"'
+        echo 'delete <bookmark_name> - Deletes the bookmark'
+        echo 'list                   - Lists all available bookmarks'
         kill -SIGINT $$
     fi
 }
