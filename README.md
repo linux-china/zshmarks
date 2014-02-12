@@ -3,8 +3,7 @@ zshmarks
 
 A port of [Bashmarks (by huyng)](https://github.com/huyng/bashmarks), a directory bookmarks for the oh-my-zsh
 
-How to install
---------------
+### How to install
 
 * Download the script or clone this repository in [oh-my-zsh](http://github.com/robbyrussell/oh-my-zsh) plugins directory:
 
@@ -18,3 +17,10 @@ How to install
 * Source `~/.zshrc`  to take changes into account:
 
         source ~/.zshrc
+
+### Differences with Bashmarks
+Because some conflicts with oh-my-zsh and git plugin, changes as following:
+
+* g -> go
+* d -> delete
+* l -> list
